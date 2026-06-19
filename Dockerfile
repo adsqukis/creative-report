@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && docker-php-ext-install zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Apache: enable rewrite (needed for .htaccess routing) + allow .htaccess overrides
+# Apache: disable conflicting MPMs (php:8.3-apache ships with event+prefork), enable rewrite + headers
+RUN a2dismod mpm_event mpm_worker 2>/dev/null; true
 RUN a2enmod rewrite headers
 RUN sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 
