@@ -1,0 +1,16 @@
+# Creative Ops — cron schedule (container path: /var/www/html)
+# Format: minute hour dom month dow user command
+# Environment variables aren't inherited by cron by default, so we source
+# them from /proc/1/environ via a wrapper — see docker/entrypoint.sh which
+# writes them to /etc/environment for cron to pick up.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+*/30 * * * * www-data . /etc/environment; php /var/www/html/cron/sla_check.php >> /var/www/html/storage/logs/cron_stdout.log 2>&1
+0 * * * *    www-data . /etc/environment; php /var/www/html/cron/alerts.php >> /var/www/html/storage/logs/cron_stdout.log 2>&1
+0 6 * * *    www-data . /etc/environment; php /var/www/html/cron/ai_daily_briefing.php >> /var/www/html/storage/logs/cron_stdout.log 2>&1
+0 10,15 * * * www-data . /etc/environment; php /var/www/html/cron/ai_insights.php >> /var/www/html/storage/logs/cron_stdout.log 2>&1
+30 23 * * *  www-data . /etc/environment; php /var/www/html/cron/workload_snapshot.php >> /var/www/html/storage/logs/cron_stdout.log 2>&1
+55 23 * * *  www-data . /etc/environment; php /var/www/html/cron/kpi_calculator.php >> /var/www/html/storage/logs/cron_stdout.log 2>&1
+

@@ -1,0 +1,362 @@
+[2026-06-19 00:00:03] alerts START
+[2026-06-19 00:00:03] sla_check START
+[2026-06-19 00:00:03] SLA overdue flagged: 0
+[2026-06-19 00:00:03] Priority scores recalculated
+[2026-06-19 00:00:03] sla_check END
+[2026-06-19 00:00:03]   deadline_alerts: 1 sent
+[2026-06-19 00:00:03]   critical_unassigned: 0 sent
+[2026-06-19 00:00:03]   high_revision: 0 sent
+[2026-06-19 00:00:03]   overload_alerts: 0 sent
+[2026-06-19 00:00:03] alerts END — total sent: 1
+[2026-06-19 00:30:02] sla_check START
+[2026-06-19 00:30:02] SLA overdue flagged: 0
+[2026-06-19 00:30:02] Priority scores recalculated
+[2026-06-19 00:30:02] sla_check END
+[2026-06-19 01:00:04] sla_check START
+[2026-06-19 01:00:04] SLA overdue flagged: 0
+[2026-06-19 01:00:04] alerts START
+[2026-06-19 01:00:04] Priority scores recalculated
+[2026-06-19 01:00:04] sla_check END
+[2026-06-19 01:00:04]   deadline_alerts: 0 sent
+[2026-06-19 01:00:04]   critical_unassigned: 0 sent
+[2026-06-19 01:00:04]   high_revision: 0 sent
+[2026-06-19 01:00:04]   overload_alerts: 0 sent
+[2026-06-19 01:00:04] alerts END — total sent: 0
+[2026-06-19 01:30:03] sla_check START
+[2026-06-19 01:30:03] SLA overdue flagged: 0
+[2026-06-19 01:30:03] Priority scores recalculated
+[2026-06-19 01:30:03] sla_check END
+[2026-06-19 02:00:02] sla_check START
+[2026-06-19 02:00:02] alerts START
+[2026-06-19 02:00:02] SLA overdue flagged: 0
+[2026-06-19 02:00:02] Priority scores recalculated
+[2026-06-19 02:00:02] sla_check END
+[2026-06-19 02:00:02]   deadline_alerts: 0 sent
+[2026-06-19 02:00:02]   critical_unassigned: 0 sent
+[2026-06-19 02:00:02]   high_revision: 0 sent
+[2026-06-19 02:00:02]   overload_alerts: 0 sent
+[2026-06-19 02:00:02] alerts END — total sent: 0
+[2026-06-19 02:30:08] sla_check START
+[2026-06-19 02:30:09] SLA overdue flagged: 0
+[2026-06-19 02:30:09] Priority scores recalculated
+[2026-06-19 02:30:09] sla_check END
+[2026-06-19 03:00:03] alerts START
+[2026-06-19 03:00:03]   deadline_alerts: 0 sent
+[2026-06-19 03:00:03]   critical_unassigned: 0 sent
+[2026-06-19 03:00:03]   high_revision: 0 sent
+[2026-06-19 03:00:03]   overload_alerts: 0 sent
+[2026-06-19 03:00:03] alerts END — total sent: 0
+[2026-06-19 03:00:03] sla_check START
+[2026-06-19 03:00:03] SLA overdue flagged: 0
+[2026-06-19 03:00:03] Priority scores recalculated
+[2026-06-19 03:00:03] sla_check END
+[2026-06-19 03:30:03] sla_check START
+[2026-06-19 03:30:03] SLA overdue flagged: 0
+[2026-06-19 03:30:03] Priority scores recalculated
+[2026-06-19 03:30:03] sla_check END
+[2026-06-19 04:00:04] alerts START
+[2026-06-19 04:00:04]   deadline_alerts: 0 sent
+[2026-06-19 04:00:04]   critical_unassigned: 0 sent
+[2026-06-19 04:00:04]   high_revision: 0 sent
+[2026-06-19 04:00:04]   overload_alerts: 0 sent
+[2026-06-19 04:00:04] alerts END — total sent: 0
+[2026-06-19 04:00:04] sla_check START
+[2026-06-19 04:00:04] SLA overdue flagged: 0
+[2026-06-19 04:00:04] Priority scores recalculated
+[2026-06-19 04:00:04] sla_check END
+[2026-06-19 04:30:03] sla_check START
+[2026-06-19 04:30:03] SLA overdue flagged: 0
+[2026-06-19 04:30:03] Priority scores recalculated
+[2026-06-19 04:30:03] sla_check END
+[2026-06-19 05:00:04] sla_check START
+[2026-06-19 05:00:04] alerts START
+[2026-06-19 05:00:04] SLA overdue flagged: 0
+[2026-06-19 05:00:04] Priority scores recalculated
+[2026-06-19 05:00:04] sla_check END
+[2026-06-19 05:00:04]   deadline_alerts: 0 sent
+[2026-06-19 05:00:04]   critical_unassigned: 0 sent
+[2026-06-19 05:00:04]   high_revision: 0 sent
+[2026-06-19 05:00:04]   overload_alerts: 0 sent
+[2026-06-19 05:00:04] alerts END — total sent: 0
+[2026-06-19 05:30:04] sla_check START
+[2026-06-19 05:30:04] SLA overdue flagged: 0
+[2026-06-19 05:30:04] Priority scores recalculated
+[2026-06-19 05:30:04] sla_check END
+[2026-06-19 06:00:03] sla_check START
+[2026-06-19 06:00:03] alerts START
+[2026-06-19 06:00:03]   deadline_alerts: 0 sent
+[2026-06-19 06:00:03]   critical_unassigned: 0 sent
+[2026-06-19 06:00:03]   high_revision: 0 sent
+[2026-06-19 06:00:03]   overload_alerts: 0 sent
+[2026-06-19 06:00:03] alerts END — total sent: 0
+[2026-06-19 06:00:03] ai_daily_briefing START
+[2026-06-19 06:00:03] SLA overdue flagged: 0
+[2026-06-19 06:00:03] Priority scores recalculated
+[2026-06-19 06:00:03] sla_check END
+[2026-06-19 06:00:05] Briefing generated: OK
+[2026-06-19 06:00:05] ai_daily_briefing END
+[2026-06-19 06:30:03] sla_check START
+[2026-06-19 06:30:03] SLA overdue flagged: 0
+[2026-06-19 06:30:03] Priority scores recalculated
+[2026-06-19 06:30:03] sla_check END
+[2026-06-19 07:00:03] alerts START
+[2026-06-19 07:00:03] sla_check START
+[2026-06-19 07:00:03] SLA overdue flagged: 0
+[2026-06-19 07:00:03] Priority scores recalculated
+[2026-06-19 07:00:03] sla_check END
+[2026-06-19 07:00:03]   deadline_alerts: 0 sent
+[2026-06-19 07:00:03]   critical_unassigned: 0 sent
+[2026-06-19 07:00:03]   high_revision: 0 sent
+[2026-06-19 07:00:03]   overload_alerts: 0 sent
+[2026-06-19 07:00:03] alerts END — total sent: 0
+[2026-06-19 07:30:03] sla_check START
+[2026-06-19 07:30:03] SLA overdue flagged: 0
+[2026-06-19 07:30:03] Priority scores recalculated
+[2026-06-19 07:30:03] sla_check END
+[2026-06-19 08:00:04] alerts START
+[2026-06-19 08:00:04] sla_check START
+[2026-06-19 08:00:04]   deadline_alerts: 0 sent
+[2026-06-19 08:00:04]   critical_unassigned: 0 sent
+[2026-06-19 08:00:04]   high_revision: 0 sent
+[2026-06-19 08:00:04]   overload_alerts: 0 sent
+[2026-06-19 08:00:04] alerts END — total sent: 0
+[2026-06-19 08:00:04] SLA overdue flagged: 0
+[2026-06-19 08:00:04] Priority scores recalculated
+[2026-06-19 08:00:04] sla_check END
+[2026-06-19 08:30:04] sla_check START
+[2026-06-19 08:30:04] SLA overdue flagged: 0
+[2026-06-19 08:30:04] Priority scores recalculated
+[2026-06-19 08:30:04] sla_check END
+[2026-06-19 09:00:03] alerts START
+[2026-06-19 09:00:03] sla_check START
+[2026-06-19 09:00:03] SLA overdue flagged: 0
+[2026-06-19 09:00:03] Priority scores recalculated
+[2026-06-19 09:00:03] sla_check END
+[2026-06-19 09:00:03]   deadline_alerts: 0 sent
+[2026-06-19 09:00:03]   critical_unassigned: 0 sent
+[2026-06-19 09:00:03]   high_revision: 0 sent
+[2026-06-19 09:00:03]   overload_alerts: 0 sent
+[2026-06-19 09:00:03] alerts END — total sent: 0
+[2026-06-19 09:30:03] sla_check START
+[2026-06-19 09:30:03] SLA overdue flagged: 0
+[2026-06-19 09:30:03] Priority scores recalculated
+[2026-06-19 09:30:03] sla_check END
+[2026-06-19 10:00:04] ai_insights START
+[2026-06-19 10:00:05] sla_check START
+[2026-06-19 10:00:05] alerts START
+[2026-06-19 10:00:05]   deadline_alerts: 0 sent
+[2026-06-19 10:00:05]   critical_unassigned: 0 sent
+[2026-06-19 10:00:05]   high_revision: 0 sent
+[2026-06-19 10:00:05]   overload_alerts: 0 sent
+[2026-06-19 10:00:05] alerts END — total sent: 0
+[2026-06-19 10:00:05] SLA overdue flagged: 0
+[2026-06-19 10:00:05] Priority scores recalculated
+[2026-06-19 10:00:05] sla_check END
+[2026-06-19 10:00:06]   insight[bottleneck]: OK
+[2026-06-19 10:00:08]   insight[performance]: OK
+[2026-06-19 10:00:09]   insight[product]: OK
+[2026-06-19 10:00:11]   insight[priority_rec]: OK
+[2026-06-19 10:00:13]   insight[forecast]: OK
+[2026-06-19 10:00:14]   insight[team_ranking]: OK
+[2026-06-19 10:00:14] ai_insights END — 6 insights processed
+[2026-06-19 10:30:03] sla_check START
+[2026-06-19 10:30:03] SLA overdue flagged: 0
+[2026-06-19 10:30:03] Priority scores recalculated
+[2026-06-19 10:30:03] sla_check END
+[2026-06-19 11:00:04] alerts START
+[2026-06-19 11:00:04] sla_check START
+[2026-06-19 11:00:04]   deadline_alerts: 0 sent
+[2026-06-19 11:00:04]   critical_unassigned: 0 sent
+[2026-06-19 11:00:04]   high_revision: 0 sent
+[2026-06-19 11:00:04]   overload_alerts: 0 sent
+[2026-06-19 11:00:04] alerts END — total sent: 0
+[2026-06-19 11:00:04] SLA overdue flagged: 0
+[2026-06-19 11:00:04] Priority scores recalculated
+[2026-06-19 11:00:04] sla_check END
+[2026-06-19 11:30:02] sla_check START
+[2026-06-19 11:30:02] SLA overdue flagged: 0
+[2026-06-19 11:30:02] Priority scores recalculated
+[2026-06-19 11:30:02] sla_check END
+[2026-06-19 12:00:06] sla_check START
+[2026-06-19 12:00:06] alerts START
+[2026-06-19 12:00:06]   deadline_alerts: 0 sent
+[2026-06-19 12:00:06]   critical_unassigned: 0 sent
+[2026-06-19 12:00:06]   high_revision: 0 sent
+[2026-06-19 12:00:06]   overload_alerts: 0 sent
+[2026-06-19 12:00:06] alerts END — total sent: 0
+[2026-06-19 12:00:06] SLA overdue flagged: 0
+[2026-06-19 12:00:06] Priority scores recalculated
+[2026-06-19 12:00:06] sla_check END
+[2026-06-19 12:30:03] sla_check START
+[2026-06-19 12:30:03] SLA overdue flagged: 0
+[2026-06-19 12:30:03] Priority scores recalculated
+[2026-06-19 12:30:03] sla_check END
+[2026-06-19 13:00:04] sla_check START
+[2026-06-19 13:00:04] alerts START
+[2026-06-19 13:00:04] SLA overdue flagged: 0
+[2026-06-19 13:00:04] Priority scores recalculated
+[2026-06-19 13:00:04] sla_check END
+[2026-06-19 13:00:04]   deadline_alerts: 0 sent
+[2026-06-19 13:00:04]   critical_unassigned: 0 sent
+[2026-06-19 13:00:04]   high_revision: 0 sent
+[2026-06-19 13:00:04]   overload_alerts: 0 sent
+[2026-06-19 13:00:04] alerts END — total sent: 0
+[2026-06-19 13:30:05] sla_check START
+[2026-06-19 13:30:05] SLA overdue flagged: 0
+[2026-06-19 13:30:05] Priority scores recalculated
+[2026-06-19 13:30:05] sla_check END
+[2026-06-19 14:00:03] sla_check START
+[2026-06-19 14:00:03] SLA overdue flagged: 0
+[2026-06-19 14:00:03] Priority scores recalculated
+[2026-06-19 14:00:03] sla_check END
+[2026-06-19 14:00:03] alerts START
+[2026-06-19 14:00:03]   deadline_alerts: 0 sent
+[2026-06-19 14:00:03]   critical_unassigned: 0 sent
+[2026-06-19 14:00:03]   high_revision: 0 sent
+[2026-06-19 14:00:03]   overload_alerts: 0 sent
+[2026-06-19 14:00:03] alerts END — total sent: 0
+[2026-06-19 14:30:03] sla_check START
+[2026-06-19 14:30:03] SLA overdue flagged: 0
+[2026-06-19 14:30:03] Priority scores recalculated
+[2026-06-19 14:30:03] sla_check END
+[2026-06-19 15:00:03] sla_check START
+[2026-06-19 15:00:03] alerts START
+[2026-06-19 15:00:03] SLA overdue flagged: 0
+[2026-06-19 15:00:03]   deadline_alerts: 0 sent
+[2026-06-19 15:00:03]   critical_unassigned: 0 sent
+[2026-06-19 15:00:03]   high_revision: 0 sent
+[2026-06-19 15:00:03]   overload_alerts: 0 sent
+[2026-06-19 15:00:03] alerts END — total sent: 0
+[2026-06-19 15:00:04] ai_insights START
+[2026-06-19 15:00:04] Priority scores recalculated
+[2026-06-19 15:00:04] sla_check END
+[2026-06-19 15:00:05]   insight[bottleneck]: OK
+[2026-06-19 15:00:08]   insight[performance]: OK
+[2026-06-19 15:00:09]   insight[product]: OK
+[2026-06-19 15:00:11]   insight[priority_rec]: OK
+[2026-06-19 15:00:13]   insight[forecast]: OK
+[2026-06-19 15:00:15]   insight[team_ranking]: OK
+[2026-06-19 15:00:15] ai_insights END — 6 insights processed
+[2026-06-19 15:30:02] sla_check START
+[2026-06-19 15:30:02] SLA overdue flagged: 0
+[2026-06-19 15:30:02] Priority scores recalculated
+[2026-06-19 15:30:02] sla_check END
+[2026-06-19 16:00:03] alerts START
+[2026-06-19 16:00:03]   deadline_alerts: 0 sent
+[2026-06-19 16:00:03]   critical_unassigned: 0 sent
+[2026-06-19 16:00:03]   high_revision: 0 sent
+[2026-06-19 16:00:03]   overload_alerts: 0 sent
+[2026-06-19 16:00:03] alerts END — total sent: 0
+[2026-06-19 16:00:04] sla_check START
+[2026-06-19 16:00:04] SLA overdue flagged: 0
+[2026-06-19 16:00:04] Priority scores recalculated
+[2026-06-19 16:00:04] sla_check END
+[2026-06-19 16:30:03] sla_check START
+[2026-06-19 16:30:03] SLA overdue flagged: 0
+[2026-06-19 16:30:03] Priority scores recalculated
+[2026-06-19 16:30:03] sla_check END
+[2026-06-19 17:00:03] alerts START
+[2026-06-19 17:00:03] sla_check START
+[2026-06-19 17:00:03] SLA overdue flagged: 0
+[2026-06-19 17:00:03]   deadline_alerts: 0 sent
+[2026-06-19 17:00:03]   critical_unassigned: 0 sent
+[2026-06-19 17:00:03]   high_revision: 0 sent
+[2026-06-19 17:00:03]   overload_alerts: 0 sent
+[2026-06-19 17:00:03] alerts END — total sent: 0
+[2026-06-19 17:00:03] Priority scores recalculated
+[2026-06-19 17:00:03] sla_check END
+[2026-06-19 17:30:02] sla_check START
+[2026-06-19 17:30:02] SLA overdue flagged: 0
+[2026-06-19 17:30:02] Priority scores recalculated
+[2026-06-19 17:30:02] sla_check END
+[2026-06-19 18:00:03] sla_check START
+[2026-06-19 18:00:03] alerts START
+[2026-06-19 18:00:03] SLA overdue flagged: 0
+[2026-06-19 18:00:03] Priority scores recalculated
+[2026-06-19 18:00:03] sla_check END
+[2026-06-19 18:00:03]   deadline_alerts: 0 sent
+[2026-06-19 18:00:03]   critical_unassigned: 0 sent
+[2026-06-19 18:00:03]   high_revision: 0 sent
+[2026-06-19 18:00:03]   overload_alerts: 0 sent
+[2026-06-19 18:00:03] alerts END — total sent: 0
+[2026-06-19 18:30:03] sla_check START
+[2026-06-19 18:30:03] SLA overdue flagged: 0
+[2026-06-19 18:30:03] Priority scores recalculated
+[2026-06-19 18:30:03] sla_check END
+[2026-06-19 19:00:03] sla_check START
+[2026-06-19 19:00:03] alerts START
+[2026-06-19 19:00:03] SLA overdue flagged: 0
+[2026-06-19 19:00:03] Priority scores recalculated
+[2026-06-19 19:00:03] sla_check END
+[2026-06-19 19:00:03]   deadline_alerts: 0 sent
+[2026-06-19 19:00:03]   critical_unassigned: 0 sent
+[2026-06-19 19:00:03]   high_revision: 0 sent
+[2026-06-19 19:00:03]   overload_alerts: 0 sent
+[2026-06-19 19:00:03] alerts END — total sent: 0
+[2026-06-19 19:30:03] sla_check START
+[2026-06-19 19:30:05] SLA overdue flagged: 0
+[2026-06-19 19:30:05] Priority scores recalculated
+[2026-06-19 19:30:05] sla_check END
+[2026-06-19 20:00:03] sla_check START
+[2026-06-19 20:00:03] alerts START
+[2026-06-19 20:00:03] SLA overdue flagged: 0
+[2026-06-19 20:00:03] Priority scores recalculated
+[2026-06-19 20:00:03] sla_check END
+[2026-06-19 20:00:03]   deadline_alerts: 0 sent
+[2026-06-19 20:00:03]   critical_unassigned: 0 sent
+[2026-06-19 20:00:03]   high_revision: 0 sent
+[2026-06-19 20:00:03]   overload_alerts: 0 sent
+[2026-06-19 20:00:03] alerts END — total sent: 0
+[2026-06-19 20:30:03] sla_check START
+[2026-06-19 20:30:03] SLA overdue flagged: 0
+[2026-06-19 20:30:03] Priority scores recalculated
+[2026-06-19 20:30:03] sla_check END
+[2026-06-19 21:00:02] alerts START
+[2026-06-19 21:00:02] sla_check START
+[2026-06-19 21:00:03]   deadline_alerts: 0 sent
+[2026-06-19 21:00:03]   critical_unassigned: 0 sent
+[2026-06-19 21:00:03]   high_revision: 0 sent
+[2026-06-19 21:00:03]   overload_alerts: 0 sent
+[2026-06-19 21:00:03] alerts END — total sent: 0
+[2026-06-19 21:00:03] SLA overdue flagged: 0
+[2026-06-19 21:00:03] Priority scores recalculated
+[2026-06-19 21:00:03] sla_check END
+[2026-06-19 21:30:04] sla_check START
+[2026-06-19 21:30:04] SLA overdue flagged: 0
+[2026-06-19 21:30:04] Priority scores recalculated
+[2026-06-19 21:30:04] sla_check END
+[2026-06-19 22:00:02] alerts START
+[2026-06-19 22:00:03] sla_check START
+[2026-06-19 22:00:03] SLA overdue flagged: 0
+[2026-06-19 22:00:03] Priority scores recalculated
+[2026-06-19 22:00:03] sla_check END
+[2026-06-19 22:00:03]   deadline_alerts: 0 sent
+[2026-06-19 22:00:03]   critical_unassigned: 0 sent
+[2026-06-19 22:00:03]   high_revision: 0 sent
+[2026-06-19 22:00:03]   overload_alerts: 0 sent
+[2026-06-19 22:00:03] alerts END — total sent: 0
+[2026-06-19 22:30:03] sla_check START
+[2026-06-19 22:30:03] SLA overdue flagged: 0
+[2026-06-19 22:30:03] Priority scores recalculated
+[2026-06-19 22:30:03] sla_check END
+[2026-06-19 23:00:03] sla_check START
+[2026-06-19 23:00:03] alerts START
+[2026-06-19 23:00:04] SLA overdue flagged: 0
+[2026-06-19 23:00:04] Priority scores recalculated
+[2026-06-19 23:00:04] sla_check END
+[2026-06-19 23:00:04]   deadline_alerts: 0 sent
+[2026-06-19 23:00:04]   critical_unassigned: 0 sent
+[2026-06-19 23:00:04]   high_revision: 0 sent
+[2026-06-19 23:00:04]   overload_alerts: 0 sent
+[2026-06-19 23:00:04] alerts END — total sent: 0
+[2026-06-19 23:30:02] workload_snapshot START
+[2026-06-19 23:30:02] sla_check START
+[2026-06-19 23:30:02] Snapshot taken for 2026-06-19
+[2026-06-19 23:30:02] SLA overdue flagged: 0
+[2026-06-19 23:30:02] Priority scores recalculated
+[2026-06-19 23:30:02] sla_check END
+[2026-06-19 23:30:02] workload_snapshot END
+[2026-06-19 23:55:02] kpi_calculator START
+[2026-06-19 23:55:02] KPI updated uid=3: creative=0 sla=0 completion=0
+[2026-06-19 23:55:02] KPI updated uid=6: creative=0 sla=0 completion=0
+[2026-06-19 23:55:02] kpi_calculator END — processed: 2
