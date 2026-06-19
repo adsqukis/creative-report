@@ -1,9 +1,10 @@
 <?php
 return [
-    'host'    => getenv('DB_HOST')    ?: getenv('MYSQLHOST')    ?: 'localhost',
-    'port'    => getenv('DB_PORT')    ?: getenv('MYSQLPORT')    ?: '3306',
-    'name'    => getenv('DB_NAME')    ?: getenv('MYSQLDATABASE') ?: 'creative_ops',
-    'user'    => getenv('DB_USER')    ?: getenv('MYSQLUSER')    ?: 'root',
-    'pass'    => getenv('DB_PASS')    ?: getenv('MYSQLPASSWORD') ?: '',
+    // Railway MySQL plugin injects MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT
+    'host'    => getenv('MYSQLHOST') ?: getenv('DB_HOST')    ?: 'localhost',
+    'port'    => getenv('MYSQLPORT') ?: getenv('DB_PORT')    ?: '3306',
+    'name'    => getenv('MYSQLDATABASE') ?: getenv('DB_NAME') ?: 'creative_ops',
+    'user'    => getenv('MYSQLUSER') ?: getenv('DB_USER')    ?: 'root',
+    'pass'    => getenv('MYSQLPASSWORD') ?: getenv('DB_PASS') ?: '',
     'charset' => 'utf8mb4',
 ];
