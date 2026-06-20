@@ -1,4 +1,33 @@
 <?php
+// === SETUP MODE — diakses via ?setup=creativeops2026 ===
+if (isset($_GET['setup']) && $_GET['setup'] === 'creativeops2026') {
+    define('APP_ROOT', __DIR__);
+    require_once APP_ROOT . '/config/app.php';
+    $cfg = require APP_ROOT . '/config/database.php';
+    $dsn = 'mysql:host=' . $cfg['host'] . ';port=' . ($cfg['port']??'3306') . ';dbname=' . $cfg['name'] . ';charset=utf8mb4';
+    header('Content-Type: text/plain');
+    try {
+        $pdo = new PDO($dsn, $cfg['user'], $cfg['pass'], [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_MULTI_STATEMENTS=>true]);
+        echo "[OK] DB: {$cfg['host']}:{$cfg['port']}/{$cfg['name']}\n\n";
+        $tables = $pdo->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
+        echo "Tables: " . implode(', ', $tables) . "\n\n";
+        $users = $pdo->query("SELECT id, email, role, is_active FROM co_users")->fetchAll(PDO::FETCH_ASSOC);
+        echo "Users:\n";
+        foreach ($users as $u) echo "  {$u['id']} | {$u['email']} | {$u['role']} | active={$u['is_active']}\n";
+        if (empty($users)) echo "  (none)\n";
+        // Test password
+        $row = $pdo->query("SELECT password FROM co_users WHERE email='admin@creative-ops.local'")->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            $match = password_verify('Admin@2026', $row['password']);
+            echo "\nPassword Admin@2026: " . ($match ? 'MATCH' : 'NO MATCH') . "\n";
+        }
+    } catch (Exception $e) {
+        echo "ERROR: " . $e->getMessage() . "\n";
+    }
+    exit;
+}
+// === END SETUP MODE ===
+
 session_start();
 
 define('APP_ROOT', __DIR__);
