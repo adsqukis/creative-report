@@ -21,6 +21,16 @@ if (isset($_GET['setup']) && $_GET['setup'] === 'creativeops2026') {
             $match = password_verify('Admin@2026', $row['password']);
             echo "\nPassword Admin@2026: " . ($match ? 'MATCH' : 'NO MATCH') . "\n";
         }
+        // === SEED ADMIN USER if not exists ===
+        if (empty($users)) {
+            echo "\n--- SEEDING ADMIN USER ---\n";
+            // Create department first
+            $pdo->exec("INSERT IGNORE INTO co_departments (id, name) VALUES (1, 'Management')");
+            // Create admin user
+            $hash = password_hash('Admin@2026', PASSWORD_BCRYPT);
+            $pdo->exec("INSERT IGNORE INTO co_users (name, email, password, role, is_active, department_id) VALUES ('Super Admin', 'admin@creative-ops.local', " . $pdo->quote($hash) . ", 'super_admin', 1, 1)");
+            echo "Admin user created: admin@creative-ops.local / Admin@2026\n";
+        }
     } catch (Exception $e) {
         echo "ERROR: " . $e->getMessage() . "\n";
     }
