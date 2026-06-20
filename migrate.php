@@ -1,34 +1,50 @@
 <?php
 // ============================================================
-// MIGRATION RUNNER
-// Jalankan via Railway: railway run php migrate.php
-// Atau lokal: php migrate.php
-//
-// Aman dijalankan berkali-kali — setiap file di migrations/ hanya
-// dieksekusi sekali, dicatat di tabel co_schema_migrations.
+// MIGRATION RUNNER — Dual Mode (Web + CLI)
+// 
+// CLI:  php migrate.php
+// Web:  GET /migrate.php?key=creativeops2026
 // ============================================================
+
+$isWeb = (php_sapi_name() !== 'cli');
+
+if ($isWeb) {
+    $validKey = 'creativeops2026';
+    if (!isset($_GET['key']) || $_GET['key'] !== $validKey) {
+        http_response_code(403);
+        echo json_encode(['status' => 'error', 'message' => 'Invalid key']);
+        exit;
+    }
+    header('Content-Type: text/plain');
+}
 
 define('APP_ROOT', __DIR__);
 require_once APP_ROOT . '/config/app.php';
 
 $cfg  = require APP_ROOT . '/config/database.php';
 $port = $cfg['port'] ?? '3306';
-$dsn  = 'mysql:host=' . $cfg['host'] . ';port=' . $port . ';dbname=' . $cfg['name'] . ';charset=' . $cfg['charset'];
+$host = $cfg['host'];
+$dsn  = 'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $cfg['name'] . ';charset=' . $cfg['charset'];
 
 try {
-    // PDO::MYSQL_ATTR_MULTI_STATEMENTS enabled here only — migration files are
-    // trusted local content (not user input), needed because each .sql file
-    // contains multiple statements separated by semicolons.
     $pdo = new PDO($dsn, $cfg['user'], $cfg['pass'], [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::MYSQL_ATTR_MULTI_STATEMENTS => true,
     ]);
+    echo "[OK] Koneksi database: {$host}:{$port}/{$cfg['name']}\n\n";
 } catch (Exception $e) {
-    fwrite(STDERR, "Koneksi database gagal: " . $e->getMessage() . PHP_EOL);
-    fwrite(STDERR, "Cek environment variables: MYSQLHOST, MYSQLPORT, MYSQLDATABASE, MYSQLUSER, MYSQLPASSWORD" . PHP_EOL);
+    $msg = "Koneksi database gagal: " . $e->getMessage() . "\n";
+    $msg .= "Host: {$host}, Port: {$port}, DB: {$cfg['name']}, User: {$cfg['user']}\n";
+    if ($isWeb) {
+        http_response_code(500);
+        echo $msg;
+    } else {
+        fwrite(STDERR, $msg);
+    }
     exit(1);
 }
 
+// Create migration tracking table
 $pdo->exec("
     CREATE TABLE IF NOT EXISTS co_schema_migrations (
         id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -49,33 +65,40 @@ $ranCount = 0;
 foreach ($files as $file) {
     $name = basename($file);
     if (in_array($name, $applied, true)) {
-        echo "SKIP  $name (sudah pernah dijalankan)" . PHP_EOL;
+        echo "[SKIP] {$name} (sudah pernah dijalankan)\n";
         continue;
     }
 
     $sql = file_get_contents($file);
     if ($sql === false || trim($sql) === '') {
-        echo "SKIP  $name (file kosong)" . PHP_EOL;
+        echo "[SKIP] {$name} (file kosong)\n";
         continue;
     }
 
-    echo "RUN   $name ... ";
+    echo "[RUN]  {$name} ... ";
     try {
         $pdo->exec($sql);
         $ins = $pdo->prepare("INSERT INTO co_schema_migrations (filename) VALUES (?)");
         $ins->execute([$name]);
-        echo "OK" . PHP_EOL;
+        echo "OK\n";
         $ranCount++;
     } catch (Exception $e) {
-        echo "GAGAL" . PHP_EOL;
-        fwrite(STDERR, "  Error di $name: " . $e->getMessage() . PHP_EOL);
-        fwrite(STDERR, "  Migration dihentikan. Perbaiki file ini lalu jalankan ulang." . PHP_EOL);
+        echo "GAGAL\n";
+        $msg = "  Error di {$name}: " . $e->getMessage() . "\n";
+        $msg .= "  Migration dihentikan. Perbaiki file ini lalu jalankan ulang.\n";
+        if ($isWeb) {
+            echo $msg;
+        } else {
+            fwrite(STDERR, $msg);
+        }
         exit(1);
     }
 }
 
 if ($ranCount === 0) {
-    echo PHP_EOL . "Tidak ada migration baru. Database sudah up to date." . PHP_EOL;
+    echo "\nTidak ada migration baru. Database sudah up to date.\n";
 } else {
-    echo PHP_EOL . "$ranCount migration berhasil dijalankan." . PHP_EOL;
+    echo "\n{$ranCount} migration(s) berhasil dijalankan.\n";
 }
+
+echo "\n--- SELESAI ---\n";
