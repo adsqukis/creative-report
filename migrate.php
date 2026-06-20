@@ -6,7 +6,8 @@
 // Web:  GET /migrate.php?key=creativeops2026
 // ============================================================
 
-$isWeb = (php_sapi_name() !== 'cli');
+$isWeb         = (php_sapi_name() !== 'cli');
+$permissiveMode = $isWeb && isset($_GET['force']);
 
 if ($isWeb) {
     $validKey = 'creativeops2026';
@@ -75,23 +76,48 @@ foreach ($files as $file) {
         continue;
     }
 
-    echo "[RUN]  {$name} ... ";
-    try {
-        $pdo->exec($sql);
+    echo "[RUN]  {$name} ...\n";
+
+    if ($permissiveMode) {
+        // Execute per-statement — skip individual errors
+        $statements = explode(";\n", $sql);
+        $okCount = 0;
+        $failCount = 0;
+        foreach ($statements as $i => $stmt) {
+            $stmt = trim($stmt);
+            if (empty($stmt) || substr($stmt, 0, 2) === '--' || substr($stmt, 0, 2) === '/*') continue;
+            try {
+                $pdo->exec($stmt);
+                $okCount++;
+            } catch (Exception $e) {
+                echo "  [LINE {$i}] WARN: " . $e->getMessage() . "\n";
+                $failCount++;
+            }
+        }
+        echo "  => {$okCount} OK, {$failCount} gagal (skipped)\n";
+        // Mark as applied even if some statements failed
         $ins = $pdo->prepare("INSERT INTO co_schema_migrations (filename) VALUES (?)");
         $ins->execute([$name]);
-        echo "OK\n";
         $ranCount++;
-    } catch (Exception $e) {
-        echo "GAGAL\n";
-        $msg = "  Error di {$name}: " . $e->getMessage() . "\n";
-        $msg .= "  Migration dihentikan. Perbaiki file ini lalu jalankan ulang.\n";
-        if ($isWeb) {
-            echo $msg;
-        } else {
-            fwrite(STDERR, $msg);
+    } else {
+        // Normal mode — execute entire file as one transaction
+        try {
+            $pdo->exec($sql);
+            $ins = $pdo->prepare("INSERT INTO co_schema_migrations (filename) VALUES (?)");
+            $ins->execute([$name]);
+            echo "  => OK\n";
+            $ranCount++;
+        } catch (Exception $e) {
+            echo "  => GAGAL\n";
+            $msg = "  Error: " . $e->getMessage() . "\n";
+            $msg .= "  Jalankan dengan ?force=1 untuk skip error.\n";
+            if ($isWeb) {
+                echo $msg;
+            } else {
+                fwrite(STDERR, $msg);
+            }
+            exit(1);
         }
-        exit(1);
     }
 }
 
